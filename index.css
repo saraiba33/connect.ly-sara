@@ -96,12 +96,17 @@ main {
     display: grid;
     grid-template-columns: 1fr 1fr;
     grid-template-rows: 1fr 1fr 1fr;
+    row-gap: 20px;
+    column-gap: 20px;
+    padding: 10px 58px;
+    margin-bottom: 60px;
 }
 
 .main-heading {
     flex-flow: wrap;
     font-size: 30px;
     grid-row: 1/ span 1;
+    align-self: center;
 }
 
 .feature-1 {
@@ -120,6 +125,27 @@ main {
 .feature-4 {
     grid-row: 3/ span 1;
     grid-column: 2/ span 1;
+}
+
+.feature-1 a, .feature-2 a, .feature-3 a, .feature-4 a {
+    text-decoration: none;
+    color:hsl(0, 0%, 100%);
+    background-color: hsl(185, 47%, 48%);
+    text-decoration: none;
+    padding: 10px 25px;
+    border-radius: 50px;
+    
+}
+
+.feature-1 p, .feature-2 p, .feature-3 p, .feature-4 p {
+    font-size: 20px;
+    margin-bottom: 50px;
+    font-family: "Poppins", sans-serif;
+}
+
+.feature-1 h3, .feature-2 h3, .feature-3 h3, .feature-4 h3 {
+    font-size: 25px;
+    margin-bottom: 10px;
 }
 
 
