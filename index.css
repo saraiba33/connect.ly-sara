@@ -15,8 +15,22 @@ header {
     background-color: hsl(204, 15%, 94%);
 }
 
+@media (max-width: 1000px){
+    header {
+        display: flex;
+        flex-flow: column nowrap;
+    }
+}
+
 .top > h1 {
     font-size: 45px;
+}
+
+@media (max-width: 1000px) {
+    .top > h1 {
+        display: flex;
+        flex-flow: column nowrap;
+    }
 }
 
 .links > ul {
@@ -25,9 +39,24 @@ header {
     margin-left: 70px;
 }
 
+@media (max-width: 1000px){
+    .links > ul {
+        display: flex;
+        flex-flow: nowrap;
+    }
+}
+
 h1, .links {
     display: inline-block;
 }
+
+@media (max-width: 1000px) {
+    h1, .links {
+        display: flex;
+        flex-flow: column nowrap;
+    }
+}
+
 
 .links a {
     text-transform: uppercase;
@@ -102,6 +131,16 @@ main {
     margin-bottom: 60px;
 }
 
+@media (max-width: 1000px) {
+    main {
+        display: grid;
+        grid-template-rows: repeat(5, auto);
+        row-gap: 5px;
+        padding: 10px 20px;
+        margin-bottom: 30px;
+    }
+}
+
 .main-heading {
     flex-flow: wrap;
     font-size: 30px;
@@ -109,8 +148,22 @@ main {
     align-self: center;
 }
 
+@media (max-width: 1000px) {
+    .main-heading {
+        grid-row: 1/ span 1;
+        flex-flow: nowrap;
+    }
+}
+
+
 .feature-1 {
     grid-row: 2/ span 1;
+}
+
+@media (max-width: 1000px) {
+    .feature-1 {
+        grid-row: 2/ span 1;
+    }
 }
 
 .feature-2 {
@@ -118,14 +171,35 @@ main {
     grid-column: 2/ span 1;
 }
 
+@media (max-width: 1000px) {
+    .feature-2 {
+        grid-row: 3/ span 1;
+    }
+}
+
+
 .feature-3 {
     grid-row: 3/ span 1;
 }
+
+@media (max-width: 1000px) {
+    .feature-3 {
+        grid-row: 4/ span 1;
+    }
+}
+
 
 .feature-4 {
     grid-row: 3/ span 1;
     grid-column: 2/ span 1;
 }
+
+@media (max-width: 1000px) {
+    .feature-4 {
+        grid-row: 5/ span 1;
+    }
+}
+
 
 .feature-1 a, .feature-2 a, .feature-3 a, .feature-4 a {
     text-decoration: none;
@@ -140,7 +214,6 @@ main {
 .feature-1 p, .feature-2 p, .feature-3 p, .feature-4 p {
     font-size: 20px;
     margin-bottom: 50px;
-    font-family: "Poppins", sans-serif;
 }
 
 .feature-1 h3, .feature-2 h3, .feature-3 h3, .feature-4 h3 {
