@@ -3,7 +3,7 @@
 body {
     font-family: "Poppins", sans-serif;
     display: grid;
-    grid-template-rows: auto aut0 auto;
+    grid-template-rows: auto auto auto;
 }
 
 header {
@@ -18,7 +18,7 @@ header {
 @media (max-width: 1000px){
     header {
         display: flex;
-        flex-flow: column nowrap;
+        flex-flow: column wrap;
     }
 }
 
@@ -29,7 +29,7 @@ header {
 @media (max-width: 1000px) {
     .top > h1 {
         display: flex;
-        flex-flow: column nowrap;
+        flex-flow: column wrap;
     }
 }
 
@@ -43,6 +43,8 @@ header {
     .links > ul {
         display: flex;
         flex-flow: nowrap;
+        padding: 10px;
+        margin-left: 0;
     }
 }
 
@@ -52,8 +54,8 @@ h1, .links {
 
 @media (max-width: 1000px) {
     h1, .links {
-        display: flex;
-        flex-flow: column nowrap;
+        display: block;
+        text-align: center;
     }
 }
 
@@ -79,6 +81,12 @@ h1, .links {
     content: "|";
     margin-right: 20px;
 }
+
+@media (max-width: 1000px) {
+    .action a + a::before {
+        content: "|";
+        margin-right: 28px;
+    }
 
 .links li + li {
     margin-left: 24px;
